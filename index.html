@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Evoker charged spell issue</title>
+</head>
+
+<body>
+    <main>
+        <p>
+            Hello,
+            My name is Artem and I want to discuss an issue connected to the new Drakthyr class in World of Warcraft
+            Dragonflight expansion. This issue is strongly related to the brand-new charged spell mechanic. To
+            illustrate what I am talking about I would use a pretty simple scheme.
+        </p>
+        <img class="img" src="/pic.png" alt="">
+        <p>
+            On the picture you may see a typical gameplay of any spellcaster class in world of warcraft. These are three
+            consecutive spells, launched in a queue one after another. What Blizzard was educating us through all the
+            years since classic is a so called “ABC rule” – always be casting. That means that the interval in between
+            two separate spells should be as close to zero as possible. The spell queue mechanic supports this idea and
+            makes it possible to mash a key bind of the next spell before the previous one finishes, removing the
+            time-gap between those spells.
+        </p>
+        <p>
+            This paradigm develops a habit of button-mashing among the warcraft players. Let me describe my typical
+            behavior as I play any caster class. As the first blue spell casting animation starts, my brain comes up
+            with a spell, that has to be used as next. It takes some time, but at the point marked with a striped line I
+            already start mashing the key bind of a red spell. Mashing goes on along the blue spell cast and continues a
+            bit during the start of the red cast (all due to the fact, that I am a human and I my brain and my hand have
+            some reaction delay). As soon as I realize, that red spell has already started, I start mashing the green
+            spell keybind and so on.
+        </p>
+        <p>
+            Now, let’s imagine that we are playing Evoker and red spell in the middle is a charged spell. We do have two
+            settings, offered by developers:
+        </p>
+        <p>
+            1) To initiate charged spells by pressing and releasing the button
+            2) Or by tapping the button two times.
+        </p>
+        <p>
+            Lets assume we have the first setting – pressing and releasing. In that case if I would press down the
+            charged spell keybind at that moment, when I normally start mashing it – nothing would happen. And this is
+            obvious, as the spell-queue window is no longer than 400ms and it opens much later.
+        </p>
+        <iframe width="420" height="315" src="https://www.youtube.com/embed/sE3MxsIIqJE"></iframe>
+        <p>
+            In case we are using the second setting – double tap, we would succeed in launching the charged spell, but
+            it would immediately release at the first stage due to continuous button mashing, that happened after the
+            launch (the one, caused by my brain-lag and hand momentum). And sometimes we don’t want to use the 1st level
+            charged spell.
+        </p>
+        <iframe width="420" height="315" src="https://www.youtube.com/embed/4hfwF36nQTE"></iframe>
+        <h2>There are several solutions to this issue:</h2>
+        <p>
+            1) Make the third setting, which would me the charged spell non-interruptible by clicking the same button.
+            In this case, releasing the charged spell should happen by pressing any other spell.
+        </p>
+        <p>
+            2) Develop two macro additions:
+            a. [nocharging] and
+            b. /release charged spell
+            This will allow to make two macro:
+            First one for the charged spell, that will never interrupt itself while mashing:
+            /use [nocharging:Fire breath] Fire breath
+            Second one for releasing the charged spell at desired moment:
+            /release charged spell
+            /cast Living flame
+        </p>
+        <p>
+            3) Make the duration of the first segment on the charged-spell cast bar insensitive to repeated mashing of
+            the same button, that launched that cast.
+        </p>
+        <p>
+            4) Make the spell-queue listen to the currently pressed key bind of a charged spell and to put it in queue,
+            even though the button was pressed down earlier than the spell queue window opened.
+        </p>
+        <p>
+            I really hope some of these solutions may be implemented in the game, as without it Evoker gameplay
+            drastically differs from a comfortable caster playstyle.
+        </p>
+        <p>Thank you for your attention.</p>
+        <p>Have a nice day.</p>
+    </main>
+</body>
+
+</html>
